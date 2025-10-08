@@ -55,24 +55,22 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-final String _imgPath = 'assets/leao';
+final String _imgPath = 'leao';
 int _imgIndex = 1;
-final String _imgExtension = '.png';
-String _img = 'assets/leao.png';
+final String _imgExtension = '.jpg';
+String _img = 'assets/leao1.jpg';
 
 
   void _incrementCounter() {
     setState(() {
-     
       _imgIndex++;
-      _img = '$_imgPath$_imgIndex$_imgExtension';
-
       if (_imgIndex > 10) {
         _imgIndex = 1;
-        _img = '$_imgPath$_imgIndex$_imgExtension';
       }
+      _img = 'assets/leao$_imgIndex$_imgExtension';
     });
   }
+
 
 
   @override
